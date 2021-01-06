@@ -2,6 +2,9 @@
   <h1>GitHub Finder</h1>
   <h4>Search GitHub users to get the profile info and the latest repos.</h4>
   <img src="img/screenshot-1.png" width="600">
+</div>
+
+<div align="center">
   <a href="http://github-finder-ag.s3-website.us-east-2.amazonaws.com/">http://github-finder-ag.s3-website.us-east-2.amazonaws.com/</a>
 </div>
 
