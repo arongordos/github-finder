@@ -16,7 +16,7 @@ body {
   background-color: $dark-color;
   padding-top: 20px;
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -44,6 +44,7 @@ a {
 .error {
   display: block;
   background-color: #ff6161;
+  border-radius: 5px;
   padding: 10px;
   margin-top: -20px;
   color: #fff;
@@ -148,11 +149,7 @@ form {
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    height: auto;
-  }
-
+@media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -189,17 +186,11 @@ form {
   }
 
   .error {
-    width: 350px;
+    max-width: 350px;
   }
 
   .repo {
     width: 100%;
     text-align: center;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 900px) {
-  body {
-    height: auto;
   }
 }
