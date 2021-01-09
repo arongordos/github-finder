@@ -4,11 +4,13 @@ import 'regenerator-runtime';
 
 const form = document.querySelector('form');
 const search = document.querySelector('#search');
+const loader = document.querySelector('.loader');
 
 const APIURL = 'https://api.github.com/users/';
 
 async function getUser(username) {
   try {
+    loader.classList.remove('loader');
     const response = await fetch(APIURL + username);
     if (response.statusText === 'Not Found')
       throw new Error('User not found!');
@@ -17,10 +19,12 @@ async function getUser(username) {
       throw new Error('You have exceeded the maximum number of requests!');
 
     const data = await response.json();
+    loader.classList.add('loader');
     createUserHtml(data);
     getRepos(username);
   }
   catch (error) {    
+    loader.classList.add('loader');
     createErrorHtml(error.message, 'error');  
   }
 }
